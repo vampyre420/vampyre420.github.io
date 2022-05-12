@@ -18,6 +18,8 @@
         #content {
         margin: auto;
         width: 550px;
+        border: 2px solid pink;
+        background-color: rgb(242, 0, 255, 1);
         }
     </style>
     <body>
