@@ -15,10 +15,13 @@
         p {
             text-align:center;
         }
-        
+        #content {
+        margin: auto;
+        width: 550px;
+        }
     </style>
     <body>
-        
+       <div id="content"> 
         <h1>Mark's blog</h1>
 
         <h3>Contents</h3>
@@ -36,3 +39,4 @@
     <h2 id="my-favorite">My favorite color</h2>
     <h6>Posted on 2002 jan 1</h6>
         <p>My favorite color is maroon, reasoning being maroon is very moody and seems kinda cool and nuanced. My second favotite color is like a navy green. 
+</div>
