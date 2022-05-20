@@ -2,40 +2,46 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>wish_i_was_retro.com</title>
     </head>
     
     <style>
-    /* some universal settings */ 
+/* some universal settings/styles */ 
+
         * {
             font-family: 'Courier new', Courier, monospace;
         }
         body {
             background-color: rgb(10, 10, 10);
+            background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/fake_brick.png);
             color: rgb(207, 201, 211);
         }
 
-    /*banner settings and sytles*/
+/* banner settings and styles */
+        .banner {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
 
-        .banner p  {
+        }
+        .banner p {
             font-family: 'Courier new', Courier, monospace;
             font-size: 18px;
-            position:absolute; 
-            top: 20px;
-        }
-        .banner-right {
-            right: 50px
-
         }
         #home-hidden {
-           padding-left:  100px;
+            margin-left: 15%;
            font-size: 30px;
         }
+        .banner-right {
+            margin-left: auto;
+            margin-right: 3%;
+        }
+
         #banner-gallery {
             padding-left: 10px;
         }
         #banner-articles {
-            paddingmargin-left:-left: 10px;
+            padding-left: 10px;
         }
         #banner-about {
             padding-left: 10px;
@@ -52,26 +58,53 @@
             text-decoration:line-through;
             color: silver;
         }
-    /*end banner settings and styles*/  
-        
-    /*article gallery*/
+
+/* article gallery */
         
         #article-gallery-info {
-            margin-top: 250px;
+            margin-top: 200px;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
             width: 650px;
-            padding: 15px;
+            padding: 20px;
             border-top: 1px solid;
             border-bottom: 1px solid;
-        }
-    
+         }
         #article-gallery-info-heading {
             font-size: 24px;
         }
+        .article-link-container {
+            width: 1000px;
+            text-align: center;
+            margin-top: 170px;
+            margin-left: auto;
+            margin-right: auto  ;
+        }
+        .link-box {
+            display: inline-block;
+            vertical-align: middle;
+            width: 240px;
+            height: 200px;
+            border-top: 1px white solid;
+            border-bottom: 1px white solid;
+            margin: 30px
+        }
+        .article-title {
+            font-size: 20px;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+        .article-link-button {
+            text-decoration:underline;
+            text-underline-offset: 4px
+        }
+       
 
+/* specific articles */
 
+        #tended-lawn-button {
+        }
 
     </style>
     <body>
@@ -79,26 +112,65 @@
         <div class="banner">
             <p>
                 <a href="" id="home-hidden">wish_i_was_retro</a>
-                </p>
+            </p>
             <p class="banner-right"> 
                 <a href="" id="banner-gallery">gallery</a> 
                 <a href="" id="banner-articles">articles</a>
                 <a href="" id="banner-about">about</a>
                 <a href="" id="banner-contact">contact</a>
-                </p>
-            </div>
+            </p>
+        </div>
         <div id="article-gallery-info">
-            <p id="article-gallery-info-heading">
+            <h4 id="article-gallery-info-heading">
                 just my thoughts, nothing serious
-                </p>
+            </h4>
             <p>
-                the articles here are really just so i can scratch my writing itch. 
-                they don't have any particular theme, just my thoughts or rants 
-                on whatever i want.  see, the fun thing about having your own website,
-                you can say whatever you want.  however, that does not mean i am not 
-                open to suggestions. if you have anything you think i should write about,
+                the articles here are really just so i can scratch my writing itch. &#8205 they don't have any particular theme, just my thoughts or rants 
+                on whatever i want. &#8205 see, the fun thing about having your own website,
+                you can say whatever you want. &#8205 however, that does not mean i am not 
+                open to suggestions. &#8205 if you have anything you think i should write about,
                 shoot me an email, and i just might do something with it.
-                </p>
-            </div>
+            </p>
+        </div>
+
+        <div class="article-link-container">                   
+                <div class="link-box">
+                    <p class="article-title">title</p>
+                    <p class="article-description"> article blurb </p>
+                    <p> <a href="" class="article-link-button" id="">read it</a>
+                    </p>
+                </div>
+                <div class="link-box">
+                    <p class="article-title">title</p>
+                    <p class="article-description"> article blurb </p>
+                    <p> <a href="" class="article-link-button" id="">read it</a>
+                    </p>
+                </div>
+                <div class="link-box">
+                    <p class="article-title">title</p>
+                    <p class="article-description"> article blurb </p>
+                    <p> <a href="" class="article-link-button" id="">read it</a>
+                    </p>
+                </div>
+                <div class="link-box">
+                    <p class="article-title">title</p>
+                    <p class="article-description"> article blurb </p>
+                    <p> <a href="" class="article-link-button" id="">read it</a>
+                    </p>
+                </div>
+                <div class="link-box">
+                    <p class="article-title">title</p>
+                    <p class="article-description"> article blurb </p>
+                    <p> <a href="" class="article-link-button" id="">read it</a>
+                    </p>
+                </div>
+                <div class="link-box">
+                    <p class="article-title">title</p>
+                    <p class="article-description"> article blurb </p>
+                    <p> <a href="" class="article-link-button" id="">read it</a>
+                    </p>
+                </div>
+        </div>
+        
     </body>
 </html>
