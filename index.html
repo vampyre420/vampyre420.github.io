@@ -6,25 +6,24 @@
     </head>
     
     <style>
-/* some universal settings/styles */ 
+
+/*some universal settings/styles*/ 
 
         * {
             font-family: 'Courier new', Courier, monospace;
         }
         body {
-            background-color: rgb(10, 10, 10);
-            background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/fake_brick.png);
+            background-color: rgb(17, 17, 17);
             color: rgb(207, 201, 211);
         }
 
-/* banner settings and styles */
+/*banner settings and styles*/
+
         .banner {
             display: flex;
             align-items: center;
             margin-top: 20px;
-            padding-bottom: 7px;
-            border-bottom: 2px solid rgba(179, 179, 179, 0.473);
-
+            padding-bottom: 10px;
         }
         .banner p {
             font-family: 'Courier new', Courier, monospace;
@@ -32,25 +31,15 @@
         }
         #home-hidden {
             margin-left: 15%;
-           font-size: 30px;
+            padding: 10px;
+            font-size: 30px;
         }
         .banner-right {
             margin-left: auto;
             margin-right: 3%;
         }
-
-        #banner-gallery {
-            padding-left: 10px;
-        }
-        #banner-articles {
-            padding-left: 10px;
-        }
-        #banner-about {
-            padding-left: 10px;
-        }
-        #banner-contact {
-            padding-left: 10px;
-
+        .banner-button {
+            padding: 10px;
         }
         a {
             text-decoration: none;
@@ -61,7 +50,7 @@
             color: silver;
         }
 
-/* article gallery */
+/*article gallery*/
         
         #article-gallery-info-container {
             margin-top: 200px;
@@ -70,11 +59,10 @@
             width: 35%;
             padding-left: 30px;
             padding-right: 30px;
-            border: 3px outset black;
-            background-color: rgba(12, 12, 12, 0.333);
+            margin-bottom: 250px;
+            border: 3px inset rgb(179, 179, 179);
          }
         #article-gallery-info-text {
-            border-top: 1px solid rgb(179, 179, 179);
             padding: 12px;
             text-align:left ;
             font-style: italic;
@@ -84,13 +72,30 @@
         #article-gallery-info-heading {
             font-size: 30px;
             text-align: center;
-            
+        }
+        #article-gallery-separator-container {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 50px;
+        }
+        
+        h2 {
+            width: 75%; 
+            text-align: center; 
+            border-bottom: 1px solid rgb(179, 179, 179); 
+            line-height: 0.1em;
+            margin: 10px 0 20px; 
+        } 
 
+        h2 span { 
+            background:rgb(17, 17, 17); 
+            padding:0 10px; 
+            font-size: 45px;
         }
         .article-link-container {
             width: 80%;
             text-align: center;
-            margin-top: 100px;
+            margin-top: 50px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -99,10 +104,13 @@
             vertical-align: middle;
             max-width: 200px;
             height: 250px;
-            border: 3px inset black;
+            border: 3px inset rgb(179, 179, 179);;
             background-color: rgb(22, 22, 22);
             border-radius: 7px;
-            margin: 125px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 125px;
+            margin-right: 125px;
             padding: 10px;
         }
         .article-title {
@@ -125,14 +133,42 @@
             padding: 7px;
             border: 3px outset rgb(179, 179, 179);
             border-radius: 15px;
+        }
 
-            
+/*specific articles*/
+
+/*footer settings and styles*/
+        
+        .footer-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            padding-top: 100px;
+            text-align: center;
+        }
+        .home-hidden-footer {
+            float: left;
+            width: 300px;
+            padding: 7px;
+        }
+        .report-a-bug-parent{
+            margin-right: auto;
+            margin-left: auto;
+            width: 300px;
+            padding: 7px;
+
 
         }
-       
+        .made-with-link {
+            float: right;
+            width: 300px;
+            padding: 7px;
 
-/* specific articles */
 
+        }
+        #not {
+            text-decoration: underline;
+        }
     </style>
     <body>
         
@@ -141,10 +177,10 @@
                 <a href="" id="home-hidden">wish_i_was_retro</a>
             </p>
             <p class="banner-right"> 
-                <a href="" id="banner-gallery">gallery</a> 
-                <a href="" id="banner-articles">articles</a>
-                <a href="" id="banner-about">about</a>
-                <a href="" id="banner-contact">contact</a>
+                <a href="" class="banner-button" id="banner-gallery">gallery</a> 
+                <a href="" class="banner-button" id="banner-articles">articles</a>
+                <a href="" class="banner-button" id="banner-about">about</a>
+                <a href="" class="banner-button" id="banner-contact">contact</a>
             </p>
         </div>
         <div id="article-gallery-info-container">
@@ -157,7 +193,9 @@
                 </p>
             </div>
         </div>
-
+        <div id="article-gallery-separator-container">
+            <h2><span>articles</span></h5>
+        </div>
         <div class="article-link-container">                   
                 <div class="link-box">
                     <p class="article-title">title</p>
@@ -207,6 +245,17 @@
                         </div>
                     </div>
                 </div>
+        </div>
+        <div class="footer-container">
+            <p>
+                <a href="" class="home-hidden-footer">wish_i_was_retro</a>
+            </p>
+            <p class="report-a-bug-parent">
+                <a href="" class="report-a-bug-link">report a bug</a>
+            </p>
+            <p>
+                <a href="" class="made-with-link"><span id="not">not</span> made with sqaurespace ;)</a>
+            </p>
         </div>
         
     </body>
