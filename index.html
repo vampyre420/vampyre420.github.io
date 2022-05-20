@@ -22,6 +22,8 @@
             display: flex;
             align-items: center;
             margin-top: 20px;
+            padding-bottom: 7px;
+            border-bottom: 2px solid rgba(179, 179, 179, 0.473);
 
         }
         .banner p {
@@ -61,50 +63,75 @@
 
 /* article gallery */
         
-        #article-gallery-info {
+        #article-gallery-info-container {
             margin-top: 200px;
             margin-left: auto;
             margin-right: auto;
-            text-align: center;
-            width: 650px;
-            padding: 20px;
-            border-top: 1px solid;
-            border-bottom: 1px solid;
+            width: 35%;
+            padding-left: 30px;
+            padding-right: 30px;
+            border: 3px outset black;
+            background-color: rgba(12, 12, 12, 0.333);
          }
+        #article-gallery-info-text {
+            border-top: 1px solid rgb(179, 179, 179);
+            padding: 12px;
+            text-align:left ;
+            font-style: italic;
+            font-size: 18px;
+            line-height: 24px;
+        }
         #article-gallery-info-heading {
-            font-size: 24px;
+            font-size: 30px;
+            text-align: center;
+            
+
         }
         .article-link-container {
-            width: 1000px;
+            width: 80%;
             text-align: center;
-            margin-top: 170px;
+            margin-top: 100px;
             margin-left: auto;
-            margin-right: auto  ;
+            margin-right: auto;
         }
         .link-box {
             display: inline-block;
             vertical-align: middle;
-            width: 240px;
-            height: 200px;
-            border-top: 1px white solid;
-            border-bottom: 1px white solid;
-            margin: 30px
+            max-width: 200px;
+            height: 250px;
+            border: 3px inset black;
+            background-color: rgb(22, 22, 22);
+            border-radius: 7px;
+            margin: 125px;
+            padding: 10px;
         }
         .article-title {
             font-size: 20px;
             font-weight: bold;
-            padding-top: 10px;
+            text-decoration: underline;
+        }
+        .article-description {
+            font-size: 16px;
+            padding: 7px;
+            text-align: left;
+            font-style: italic;
+        }
+        .button-parent {
+            display: flex;
+            justify-content: center;
         }
         .article-link-button {
-            text-decoration:underline;
-            text-underline-offset: 4px
+            position: absolute;
+            padding: 7px;
+            border: 3px outset rgb(179, 179, 179);
+            border-radius: 15px;
+
+            
+
         }
        
 
 /* specific articles */
-
-        #tended-lawn-button {
-        }
 
     </style>
     <body>
@@ -120,55 +147,65 @@
                 <a href="" id="banner-contact">contact</a>
             </p>
         </div>
-        <div id="article-gallery-info">
+        <div id="article-gallery-info-container">
             <h4 id="article-gallery-info-heading">
                 just my thoughts, nothing serious
             </h4>
-            <p>
-                the articles here are really just so i can scratch my writing itch. &#8205 they don't have any particular theme, just my thoughts or rants 
-                on whatever i want. &#8205 see, the fun thing about having your own website,
-                you can say whatever you want. &#8205 however, that does not mean i am not 
-                open to suggestions. &#8205 if you have anything you think i should write about,
-                shoot me an email, and i just might do something with it.
-            </p>
+            <div id="article-gallery-info-text">
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                </p>
+            </div>
         </div>
 
         <div class="article-link-container">                   
                 <div class="link-box">
                     <p class="article-title">title</p>
-                    <p class="article-description"> article blurb </p>
-                    <p> <a href="" class="article-link-button" id="">read it</a>
-                    </p>
+                    <p class="article-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed </p>
+                    <div class="button-parent">
+                        <div class="article-link-button"><a href="" id="">read it</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="link-box">
                     <p class="article-title">title</p>
-                    <p class="article-description"> article blurb </p>
-                    <p> <a href="" class="article-link-button" id="">read it</a>
-                    </p>
+                    <p class="article-description"> Lorem ipsum dolor sit amet </p>
+                    <div class="button-parent">
+                        <div class="article-link-button"><a href="" id="">read it</a>
+                        </div>
+                    </div>
+                </div>  
+                <div class="link-box">
+                    <p class="article-title">title</p>
+                    <p class="article-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+                    <div class="button-parent">
+                        <div class="article-link-button"><a href="" id="">read it</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="link-box">
                     <p class="article-title">title</p>
-                    <p class="article-description"> article blurb </p>
-                    <p> <a href="" class="article-link-button" id="">read it</a>
-                    </p>
+                    <p class="article-description"> Lorem ipsum dolor sit amet </p>
+                    <div class="button-parent">
+                        <div class="article-link-button"><a href="" id="">read it</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="link-box">
                     <p class="article-title">title</p>
-                    <p class="article-description"> article blurb </p>
-                    <p> <a href="" class="article-link-button" id="">read it</a>
-                    </p>
+                    <p class="article-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed  </p>
+                    <div class="button-parent">
+                        <div class="article-link-button"><a href="" id="">read it</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="link-box">
                     <p class="article-title">title</p>
-                    <p class="article-description"> article blurb </p>
-                    <p> <a href="" class="article-link-button" id="">read it</a>
-                    </p>
-                </div>
-                <div class="link-box">
-                    <p class="article-title">title</p>
-                    <p class="article-description"> article blurb </p>
-                    <p> <a href="" class="article-link-button" id="">read it</a>
-                    </p>
+                    <p class="article-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+                    <div class="button-parent">
+                        <div class="article-link-button"><a href="" id="">read it</a>
+                        </div>
+                    </div>
                 </div>
         </div>
         
