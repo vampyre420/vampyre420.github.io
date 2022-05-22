@@ -45,6 +45,9 @@
             0% {
                 opacity: 0;
             }
+            50% {
+                opacity: 0.80;
+            }
             100% {
                 opacity: 1;
             }
@@ -170,6 +173,9 @@
             padding:0 10px; 
             font-size: 55px;
         }
+
+/*article link gallery*/
+
         .article-link-container {
             width: 80%;
             text-align: center;
@@ -202,8 +208,12 @@
             font-size: 16px;
             text-align: left;
             font-style: italic;
+            overflow-y: hidden;
+            padding-right: 5px;
+        }
+        .article-description:hover{
             overflow-y: scroll;
-
+            padding-right: 0px;
         }
         .button-parent {
             position: relative;
