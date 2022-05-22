@@ -4,8 +4,28 @@
         <meta charset="utf-8">
         <title>wish_i_was_retro.com</title>
     </head>
-    
-    <style>
+
+<!--some css-->
+
+<style>
+
+/*java script settings*/
+
+        .scrollFade {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .scrollFade--hidden {
+  opacity: 0;
+  pointer-events: none;
+        }
+        .scrollFade--visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .scrollFade--animate {
+            transition: opacity 0.4s ease-in-out;
+        }
 
 /*some universal settings/styles*/ 
 
@@ -23,6 +43,7 @@
             display: flex;
             align-items: center;
             margin-top: 20px;
+            margin-bottom: 9%;
             padding-bottom: 10px;
         }
         .banner p {
@@ -53,29 +74,73 @@
 /*article gallery*/
         
         #article-gallery-info-container {
-            margin-top: 200px;
             margin-left: auto;
             margin-right: auto;
             width: 35%;
             padding-left: 30px;
             padding-right: 30px;
-            margin-bottom: 250px;
+            margin-bottom: 20%;
             border: 3px inset rgb(179, 179, 179);
+            border-radius: 5px;
          }
         #article-gallery-info-text {
-            padding: 12px;
+            padding: 7px;
             text-align:left ;
             font-style: italic;
             font-size: 18px;
             line-height: 24px;
         }
         #article-gallery-info-heading {
+            padding-top: 10px;
             font-size: 30px;
             text-align: center;
+            text-decoration: 2px underline;
+            text-underline-offset: 8px;
         }
+
+/*down arrow*/ 
+        .down-arrow {
+            position: absolute;
+            top: calc(100vh - 115px);
+            left: calc(50% - 14px);
+            width: 0;
+            height: 30px;
+            border: 2px solid;
+            border-radius: 2px;
+            animation: jumpInfinite 1.5s infinite;
+        }
+
+        .down-arrow:after {
+            content: " ";
+            position: absolute;
+            top: 12px;
+            left: -10px;
+            width: 16px;
+            height: 16px;
+            border-bottom: 4px solid;
+            border-right: 4px solid;
+            border-radius: 4px;
+            transform: rotateZ(45deg);
+        }
+
+        @keyframes jumpInfinite {
+            0% {
+                margin-top: 0;
+            }
+            50% {
+                margin-top: 16px;
+            }
+            100% {
+                margin-top: 0;
+            }
+        }
+
+/*page separator*/
+
         #article-gallery-separator-container {
             display: flex;
             justify-content: center;
+            margin-top: 28%;
             padding-bottom: 50px;
         }
         
@@ -90,7 +155,7 @@
         h2 span { 
             background:rgb(17, 17, 17); 
             padding:0 10px; 
-            font-size: 45px;
+            font-size: 55px;
         }
         .article-link-container {
             width: 80%;
@@ -101,14 +166,13 @@
         }
         .link-box {
             display: inline-block;
-            vertical-align: middle;
-            max-width: 200px;
-            height: 250px;
+            width: 200px;
+            height: 275px;
             border: 3px inset rgb(179, 179, 179);;
             background-color: rgb(22, 22, 22);
             border-radius: 7px;
-            margin-top: 50px;
-            margin-bottom: 50px;
+            margin-top: 20px;
+            margin-bottom: 80px;
             margin-left: 125px;
             margin-right: 125px;
             padding: 10px;
@@ -119,17 +183,24 @@
             text-decoration: underline;
         }
         .article-description {
+            height: 130px;
+            margin-bottom: 5px;
+            padding: 5px;
             font-size: 16px;
-            padding: 7px;
             text-align: left;
             font-style: italic;
+            overflow-y: scroll;
+
         }
         .button-parent {
-            display: flex;
-            justify-content: center;
+            position: relative;
+            width: 200px;
         }
         .article-link-button {
-            position: absolute;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 18px;
             padding: 7px;
             border: 3px outset rgb(179, 179, 179);
             border-radius: 15px;
@@ -142,9 +213,12 @@
         .footer-container {
             display: flex;
             justify-content: center;
-            margin-bottom: 30px;
-            padding-top: 100px;
+            margin-top: 125px;
+            margin-bottom: 4px;
+            padding-top: 4px;
             text-align: center;
+            font-size: 12px;
+            border-top: 1px solid rgb(92, 92, 92);
         }
         .home-hidden-footer {
             float: left;
@@ -156,22 +230,21 @@
             margin-left: auto;
             width: 300px;
             padding: 7px;
-
-
         }
         .made-with-link {
             float: right;
             width: 300px;
             padding: 7px;
-
-
         }
         #not {
             text-decoration: underline;
         }
+
     </style>
+
     <body>
-        
+<!--banner-->
+
         <div class="banner">
             <p>
                 <a href="" id="home-hidden">wish_i_was_retro</a>
@@ -183,69 +256,133 @@
                 <a href="" class="banner-button" id="banner-contact">contact</a>
             </p>
         </div>
-        <div id="article-gallery-info-container">
-            <h4 id="article-gallery-info-heading">
-                just my thoughts, nothing serious
-            </h4>
+
+<!--page info-->
+        <div class="scrollFade" id="article-gallery-info-container">
+            <p id="article-gallery-info-heading">
+                <strong>just my thoughts, nothing serious</strong>
+            </p>
+        
             <div id="article-gallery-info-text">
                 <p>
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                 </p>
             </div>
         </div>
-        <div id="article-gallery-separator-container">
+
+<!--down arrow-->
+
+        <div class="down-arrow"></div>
+
+<!--gallery-head-->
+
+        <div class="scrollFade" id="article-gallery-separator-container">
             <h2><span>articles</span></h5>
         </div>
-        <div class="article-link-container">                   
-                <div class="link-box">
+        <div class="article-link-container scrollFade">                   
+                <div class="link-box scrollFade">
                     <p class="article-title">title</p>
-                    <p class="article-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed </p>
+                    <div class="article-description"> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+                    </div>
                     <div class="button-parent">
-                        <div class="article-link-button"><a href="" id="">read it</a>
+                        <div class="article-link-button">
+                            <a href="" id="">read it</a>
                         </div>
                     </div>
                 </div>
-                <div class="link-box">
+                <div class="link-box scrollFade">
                     <p class="article-title">title</p>
-                    <p class="article-description"> Lorem ipsum dolor sit amet </p>
-                    <div class="button-parent">
-                        <div class="article-link-button"><a href="" id="">read it</a>
-                        </div>
+                    <div class="article-description"> 
+                        <p>Lorem ipsum dolor sit amet, consectetur </p>
                     </div>
-                </div>  
-                <div class="link-box">
-                    <p class="article-title">title</p>
-                    <p class="article-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
                     <div class="button-parent">
-                        <div class="article-link-button"><a href="" id="">read it</a>
+                        <div class="article-link-button">
+                            <a href="" id="">read it</a>
                         </div>
                     </div>
                 </div>
-                <div class="link-box">
+                <div class="link-box scrollFade">
                     <p class="article-title">title</p>
-                    <p class="article-description"> Lorem ipsum dolor sit amet </p>
+                    <div class="article-description"> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+                    </div>
                     <div class="button-parent">
-                        <div class="article-link-button"><a href="" id="">read it</a>
+                        <div class="article-link-button">
+                            <a href="" id="">read it</a>
                         </div>
                     </div>
                 </div>
-                <div class="link-box">
+                <div class="link-box scrollFade">
                     <p class="article-title">title</p>
-                    <p class="article-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed  </p>
+                    <div class="article-description"> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed </p>
+                    </div>
                     <div class="button-parent">
-                        <div class="article-link-button"><a href="" id="">read it</a>
+                        <div class="article-link-button">
+                            <a href="" id="">read it</a>
                         </div>
                     </div>
                 </div>
-                <div class="link-box">
+                <div class="link-box scrollFade">
                     <p class="article-title">title</p>
-                    <p class="article-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+                    <div class="article-description"> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
                     <div class="button-parent">
-                        <div class="article-link-button"><a href="" id="">read it</a>
+                        <div class="article-link-button">
+                            <a href="" id="">read it</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="link-box scrollFade">
+                    <p class="article-title">title</p>
+                    <div class="article-description"> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing </p>
+                    </div>
+                    <div class="button-parent">
+                        <div class="article-link-button">
+                            <a href="" id="">read it</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="link-box scrollFade">
+                    <p class="article-title">title</p>
+                    <div class="article-description"> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed </p>
+                    </div>
+                    <div class="button-parent">
+                        <div class="article-link-button">
+                            <a href="" id="">read it</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="link-box scrollFade">
+                    <p class="article-title">title</p>
+                    <div class="article-description"> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                    <div class="button-parent">
+                        <div class="article-link-button">
+                            <a href="" id="">read it</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="link-box scrollFade">
+                    <p class="article-title">title</p>
+                    <div class="article-description"> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing </p>
+                    </div>
+                    <div class="button-parent">
+                        <div class="article-link-button">
+                            <a href="" id="">read it</a>
                         </div>
                     </div>
                 </div>
         </div>
+
+<!--footer-->
+
         <div class="footer-container">
             <p>
                 <a href="" class="home-hidden-footer">wish_i_was_retro</a>
@@ -258,5 +395,47 @@
             </p>
         </div>
         
+<!--javascript code ( ′～‵)-->
+
+<script>
+
+var fadeElements = document.getElementsByClassName('scrollFade');
+
+        function scrollFade() {
+            var viewportBottom = window.scrollY + window.innerHeight;
+
+        for (var index = 0; index < fadeElements.length; index++) {
+            var element = fadeElements[index];
+             var rect = element.getBoundingClientRect();
+
+             var elementFourth = rect.height/4;
+             var fadeInPoint = window.innerHeight - elementFourth;
+             var fadeOutPoint = -(rect.height/2);
+
+        if (rect.top <= fadeInPoint) {
+            element.classList.add('scrollFade--visible');
+            element.classList.add('scrollFade--animate');
+            element.classList.remove('scrollFade--hidden');
+        }         
+        else {
+            element.classList.remove('scrollFade--visible');
+            element.classList.add('scrollFade--hidden');
+        }
+
+        if (rect.top <= fadeOutPoint) {
+            element.classList.remove('scrollFade--visible');
+            element.classList.add('scrollFade--hidden');
+        }
+      }
+    }
+
+        document.addEventListener('scroll', scrollFade);
+        window.addEventListener('resize', scrollFade);
+        document.addEventListener('DOMContentLoaded', function() {
+        scrollFade();
+    });
+
+</script>
+
     </body>
 </html>
