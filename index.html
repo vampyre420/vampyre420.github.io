@@ -36,6 +36,19 @@
             background-color: rgb(17, 17, 17);
             color: rgb(207, 201, 211);
         }
+        body {
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
 
 /*banner settings and styles*/
 
@@ -141,7 +154,7 @@
             display: flex;
             justify-content: center;
             margin-top: 28%;
-            padding-bottom: 50px;
+            padding-bottom: 100px;
         }
         
         h2 {
